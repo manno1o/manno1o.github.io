@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Front desk that answers every call — for HVAC & plumbing shops</title>
+<meta name="description" content="Phone answering for HVAC and plumbing contractors. Books jobs, texts the customer, sends emergencies to your on-call tech.">
+<style>
+body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:860px;margin:0 auto;padding:24px;color:#1d1d1d;line-height:1.55}
+h1{font-size:2rem;line-height:1.2;margin-top:8px}h2{margin-top:48px}
+.small{color:#666;font-size:.9rem}.plans{display:flex;gap:16px;flex-wrap:wrap}
+.plan{flex:1;min-width:240px;border:1px solid #ddd;border-radius:8px;padding:18px}
+.price{font-size:1.8rem;font-weight:700}a.btn,button{background:#0b5cad;color:#fff;padding:10px 18px;border-radius:6px;text-decoration:none;border:0;font-size:1rem;cursor:pointer}
+input,textarea{width:100%;padding:9px;margin:4px 0 12px;border:1px solid #ccc;border-radius:5px;font:inherit;box-sizing:border-box}
+ul{padding-left:20px}footer{margin-top:60px;border-top:1px solid #eee;padding-top:16px}
+</style></head><body>
+<p class="small">Chicago, IL · built by Bakyt Kydyrali</p>
+<h1>Stop losing jobs to voicemail.</h1>
+<p>I run an HVAC company in Chicago. In July our phones ring nonstop, and every call we miss usually goes to the next guy on Google. So I built a phone line that picks up when we can't.</p>
+<p>It answers like a person at your front desk, gets the name, address and what's wrong, books the visit, and texts the customer a confirmation. If it's a no-heat or a burst pipe, it calls your on-call tech right away.</p>
+<p><a class="btn" href="#contact">Try it free for 7 days</a></p>
+
+<h2>What it does</h2>
+<ul>
+<li>Picks up 24/7, including nights and weekends</li>
+<li>Asks the questions your dispatcher would ask (system type, age, symptoms, access)</li>
+<li>Books into your calendar or sends you the job as a text/email</li>
+<li>Emergencies go straight to the on-call phone</li>
+<li>Texts back anyone who hangs up before it answers</li>
+<li>Every call recorded and summarized, so you can check how it did</li>
+</ul>
+<p>The code is public if you want to see how it works: <a href="https://github.com/manno1o/contractor-voice-receptionist">github.com/manno1o/contractor-voice-receptionist</a>. I also share free n8n workflows for contractors <a href="https://github.com/manno1o/n8n-contractor-templates">here</a>.</p>
+
+<h2>Pricing</h2>
+<div class="plans">
+<div class="plan"><h3>Solo shop</h3><div class="price">$149<span class="small">/mo</span></div>
+<ul><li>1 phone number</li><li>Up to 300 calls a month</li><li>Text confirmations</li><li>Emergency transfer</li></ul></div>
+<div class="plan"><h3>Busy shop</h3><div class="price">$299<span class="small">/mo</span></div>
+<ul><li>Up to 3 numbers / locations</li><li>Up to 1,000 calls a month</li><li>Calendar or CRM booking (Housecall Pro, Jobber, ServiceTitan, Google)</li><li>Spanish and English</li></ul></div>
+</div>
+<p>7 days free, no card. I set it up with you; you don't have to change your phone number, you just forward missed calls. Cancel anytime.</p>
+
+<h2>Questions people ask</h2>
+<p><b>Will customers know it's not a person?</b> Some will. Most just want someone to pick up and get a tech out. It tells them it's the after-hours assistant if they ask.</p>
+<p><b>What if it gets something wrong?</b> You get a summary and recording of every call. During the trial we tune it on your real calls.</p>
+<p><b>Do I need to buy anything?</b> No. Phone minutes are included in the plan.</p>
+
+<h2 id="contact">Start the free week</h2>
+<form id="f" onsubmit="return sendMail(event)">
+<label>Name<input name="name" required></label>
+<label>Company<input name="company" required></label>
+<label>Phone<input name="phone" required></label>
+<label>Anything I should know (trade, area, call volume)<textarea name="msg" rows="4"></textarea></label>
+<button type="submit">Send</button>
+</form>
+<p class="small">Or just email me: <a href="mailto:312emr@gmail.com">312emr@gmail.com</a></p>
+<footer class="small">© 2026 Bakyt Kydyrali · Chicago, IL</footer>
+<script>
+function sendMail(e){e.preventDefault();var f=e.target;
+var b="Name: "+f.name.value+"\nCompany: "+f.company.value+"\nPhone: "+f.phone.value+"\n\n"+f.msg.value;
+location.href="mailto:312emr@gmail.com?subject="+encodeURIComponent("Free trial - "+f.company.value)+"&body="+encodeURIComponent(b);return false}
+</script>
+</body></html>
